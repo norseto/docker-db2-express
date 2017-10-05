@@ -1,7 +1,7 @@
 FROM ibmcom/db2express-c
 
-#ENV LICENSE accept
-#ENV DB2INST1_PASSWORD '<YourStrong!Passw0rd>'
+ENV LICENSE accept
+ENV DB2INST1_PASSWORD '<YourStrong!Passw0rd>'
 
 RUN mv /entrypoint.sh /entrypoint_org.sh
 COPY entrypoint.sh /
