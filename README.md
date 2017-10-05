@@ -29,7 +29,7 @@ Next, create database initialization sql file and save as `.sql` file.
       NAME nvarchar(50)
     )
 ---
-Start the container. The container runs .sql or .sh files in the /docker-entrypoint-initdb.d when master db does not exist.
+Start the container. The container runs .sql or .sh files in the /docker-entrypoint-initdb.d when any database does not exist(`db2 list db directory` returns error).
 
 `docker run -d -p 50000:50000 -v SQL_FILE_DIRECTORY:/docker-entrypoint-initdb.d norseto/db2-express`
 
